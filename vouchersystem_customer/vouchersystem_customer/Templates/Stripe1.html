@@ -1,0 +1,27 @@
+﻿{% extends "AdminLayout.html" %}
+{% block main %}
+<div class="row">
+    <div class="col-xs-3">
+
+    </div>
+    <div class="col-xs-6">
+        <form class="form-horizontal" role="form" method="post">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_6bUaeh0x1Qjhvx6aFKuwXlTa"
+                            data-image="/img/documentation/checkout/marketplace.png"
+                            data-name="{{ hotel_name }}"
+                            data-description="2 widgets"
+                            data-currency="eur"
+                            data-amount="2000">
+                    </script>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-3">
+
+    </div>
+</div>
+{% endblock %}

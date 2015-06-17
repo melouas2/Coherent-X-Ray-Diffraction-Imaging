@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Alkimii Admin Page</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Alkimii</h1>
+        <h2>Information Transformation</h2>
+        <h3>Voucher System</h3>
+    </div>
+        <div class="row">
+            <div class="col-xs-4">
+
+            </div>
+            <div class="col-xs-4">
+                <form class="form-horizontal" role="form" method="post">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="Hotel">Hotel:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="Hotel" id="hotel">
+                                {% for i in rows %}
+                                <option value="{{ i.Hotel }}">{{ i.Hotel }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="VoucherType">Voucher Type:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="VoucherType">
+                                <option>Room</option>
+                                <option>Restaurant</option>
+                                <option>Spa</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="Amount">Amount:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="Amount" id="amount_dropdown">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="150">150</option>
+                                <option value="200">200</option>
+                            </select>
+                            <noscript>
+                                <input type="submit" value="Select">
+                            </noscript>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="DeliveryOption">Delivery Option:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="DeliveryOption">
+                                <option>Email</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--<div class="form-group">
+                        <label class="col-sm-2 control-label" for="StaffName">Customer Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="StaffName" placeholder="Enter Name...">
+                        </div>
+                    </div>-->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="Email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" name="Email" placeholder="Enter Email...">
+                        </div>
+                    </div>
+
+                    {% if error %}
+                    <p class=error>
+                        <strong>Message:</strong> {{ error }}
+                    </p>
+                    {% endif %}
+                    <!--<div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                    data-key="pk_test_6bUaeh0x1Qjhvx6aFKuwXlTa"
+                                    data-image="/img/documentation/checkout/marketplace.png"
+                                    data-name="{{ hotel_name }}"
+                                    data-description="2 widgets"
+                                    data-currency="eur"
+                                    data-amount="2000">
+                            </script>
+                        </div>
+                    </div>-->
+
+                   
+                     <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <script src="https://checkout.stripe.com/checkout.js"></script>
+                            <button type="submit" class="btn btn-default" id="customButton">Purchase Voucher</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <script>
+                                var handler = StripeCheckout.configure({
+                                    key: 'pk_test_czrXlWzj84mVEqbmgCAtDHx7',
+                                    token: function (token) {
+                                        // Use the token to create the charge with a server-side script.
+                                        // You can access the token ID with `token.id`
+                                    }
+                                });
+
+                                $('#customButton').on('click', function (e) {
+                                    // Open Checkout with further options
+                                    handler.open({
+                                        name: $('#hotel').val(),
+                                        description: 'Voucher Purchase',
+                                        currency: "eur",
+                                        amount: ($('#amount_dropdown').val() * 100)
+                                    });
+                                // Find out how to fix this
+                                   e.preventDefault();
+                                });
+                                 //Close Checkout on page navigation
+                                $(window).on('popstate', function (e) {
+                                    handler.close();
+                                });
+                               
+                                
+                            </script>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-4">
+
+            </div>
+        </div>
+    
+
+</body>
+</html>
