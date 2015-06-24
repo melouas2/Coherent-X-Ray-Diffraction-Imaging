@@ -6,26 +6,19 @@
 
 $(document).ready(function () {
 
-    $('#amount_dropdown').on('change', function (e) {
+    $('#hotel,#amount').bind('change', function (e) {
             
-            var amount = $(this).val();
-            
-            //var e = document.getElementById("ddlViewBy");
-            //var strUser = e.options[e.selectedIndex].text;
-            //$('.table').find('tr').each(function () {
-            //    var $me = $(this);
-            //    if (!$me.children('td:first').text().match(reg)) {
-            //        if ($me.attr('id') != 'voucher-header') {
-            //            $me.hide();
-            //            //document.getElementById("#form_frame").value = "All";
-            //        }
-            //    } else {
-            //        $me.show();
-            //    }
-            //});
+
+        var url = "/vouchers?amount=" + $("#amount").val();
+
+        $("#results").load(url);
+        window.history.pushState('obj', 'newtitle', url);
+
+        
     });
 
 });
+
 
 
 $(function () {

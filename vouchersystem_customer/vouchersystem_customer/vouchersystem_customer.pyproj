@@ -61,7 +61,9 @@
     <Content Include="static\logos\VoucherERD.JPG" />
     <Content Include="static\maldron-hotel-parnell-sq.gif" />
     <Content Include="static\ribbon.jpg" />
+    <Content Include="Templates\AdminLayout.html" />
     <Content Include="Templates\Home.html" />
+    <Content Include="Templates\Home2.html" />
     <Content Include="Templates\Stripe1.html" />
     <Content Include="Templates\Stripe2.html" />
     <Content Include="Templates\VoucherPDF.html" />

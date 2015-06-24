@@ -11,3 +11,16 @@ C:\Users\Simon\Desktop\vouchersystem_customer\vouchersystem_customer\bin\Microso
 C:\Users\Simon\Desktop\vouchersystem_customer\vouchersystem_customer\bin\wfastcgi.py
 C:\Users\Simon\Desktop\vouchersystem_customer\vouchersystem_customer\obj\Debug\web.config
 C:\Users\Simon\Desktop\vouchersystem_customer\vouchersystem_customer\obj\Debug\web.debug.config
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\attach_server.py
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\visualstudio_py_debugger.py
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\visualstudio_py_repl.py
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\visualstudio_py_util.py
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\__init__.py
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\__main__.py
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\bin\AzureSetup.cfg
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\bin\Microsoft.PythonTools.AzureSetup.exe
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\bin\Microsoft.PythonTools.AzureSetup.exe.config
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\bin\wfastcgi.py
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\web.config
+C:\Users\Simon\Desktop\vouchersystem_cus\vouchersystem_customer\vouchersystem_customer\obj\Debug\web.debug.config
