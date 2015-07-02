@@ -29,10 +29,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="connection_string.py" />
+    <Compile Include="mail_pdf.py" />
     <Compile Include="pdfs.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="regexpressions.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="views.py">
@@ -63,7 +68,6 @@
     <Content Include="static\ribbon.jpg" />
     <Content Include="Templates\AdminLayout.html" />
     <Content Include="Templates\Home.html" />
-    <Content Include="Templates\Home2.html" />
     <Content Include="Templates\Stripe1.html" />
     <Content Include="Templates\Stripe2.html" />
     <Content Include="Templates\VoucherPDF.html" />

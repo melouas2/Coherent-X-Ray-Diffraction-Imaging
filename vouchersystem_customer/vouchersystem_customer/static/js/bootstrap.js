@@ -5,20 +5,63 @@
  */
 
 $(document).ready(function () {
-
-    $('#hotel,#amount').bind('change', function (e) {
-            
-
-        var url = "/vouchers?amount=" + $("#amount").val();
-
-        $("#results").load(url);
-        window.history.pushState('obj', 'newtitle', url);
-
+    $('#form_frame').bind('click', function () {
+        var voucherType = $(this).val();
+        if (voucherType == 'Active') {
+            $('.active-voucher').show();
+            $('.inactive-voucher').hide();
+        }
+        else if (voucherType == 'Inactive'){
+            $('.active-voucher').hide();
+            $('.inactive-voucher').show();
         
+        }
+        else {  
+            $('.active-voucher').show();
+            $('.inactive-voucher').show();
+        }
     });
+    $('#search_voucher').on('keyup', function (e) {
+        if ('' != this.value) {
+            var reg = new RegExp(this.value, 'i');
+
+            $('.table').find('tr').each(function () {
+                var $me = $(this);
+                if (!$me.children('td:first').text().match(reg)) {
+                    if ($me.attr('id') != 'voucher-header') {
+                        $me.hide();
+                        //document.getElementById("#form_frame").value = "All";
+                    }
+                } else {
+                    $me.show();
+                }
+            });
+        } else {
+            $('.table').find('tr').show();
+        }
+    });
+    //$('#display').on('click', function () {
+
+
+    //    var url = "/display";
+
+
+    //    $("#results").load(url);
+    //    window.history.pushState('obj', 'newtitle', url);
+
+    //});
+    //$('#category').bind('change', function () {
+
+
+    //    var url = "/products?hotel=" + $("#hotel").val() + "&category=" + $("#category").val();
+
+
+    //    $("#results").load(url);
+    //    window.history.pushState('obj', 'newtitle', url);
+
+    //});
 
 });
-
 
 
 $(function () {

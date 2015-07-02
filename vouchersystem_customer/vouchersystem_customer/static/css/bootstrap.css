@@ -7,6 +7,10 @@
  * Based on Bootstrap
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+#register {
+    color: #FF4100;
+}
+
 #inactive {
     color: red;
 }
@@ -1107,7 +1111,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #93c54b;
+  color: #FF4100;
   text-decoration: none;
 }
 a:hover,
@@ -4863,8 +4867,8 @@ a.badge:focus {
 .jumbotron {
   padding: 30px 15px;
   margin-bottom: 30px;
-  color: #FFFFFF;
-  background-color: #FF4719;
+  /*color: #FFFFFF;*/
+  background-color: #FFFFFF;
   text-align: center;
 }
 .jumbotron h1,

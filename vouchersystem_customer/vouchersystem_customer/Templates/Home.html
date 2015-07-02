@@ -1,14 +1,11 @@
 ﻿
-<div id="results">
-
     {% extends "AdminLayout.html" %}
 
     {% block main %}
         <div class="row">
-            <div class="col-xs-4">
-
+            <div class="col-xs-3">
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-6">
                 <form class="form-horizontal" role="form" method="post">
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="Hotel">Hotel:</label>
@@ -51,19 +48,18 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label" for="DeliveryOption">Delivery Option:</label>
+                        <label class="col-sm-2 control-label" for="FirstName">First Name:</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="DeliveryOption">
-                                <option>Email</option>
-                            </select>
+                            <input type="text" class="form-control" name="FirstName" placeholder="Enter Name...">
                         </div>
                     </div>
-                    <!--<div class="form-group">
-                        <label class="col-sm-2 control-label" for="StaffName">Customer Name:</label>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="LastName">Last Name:</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="StaffName" placeholder="Enter Name...">
+                            <input type="text" class="form-control" name="LastName" placeholder="Enter Name...">
                         </div>
-                    </div>-->
+                    </div>
+                    
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="Email">Email:</label>
                         <div class="col-sm-10">
@@ -71,9 +67,9 @@
                         </div>
                     </div>
 
-                    {% if error %}
+                    {% if message %}
                     <p class=error>
-                        <strong>Message:</strong> {{ error }}
+                        {{ message }}
                     </p>
                     {% endif %}
                     <!--<div class="form-group">
@@ -160,10 +156,9 @@
                     </div>-->
                 </form>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-3">
 
             </div>
         </div>
 
 {% endblock %}
-</div>

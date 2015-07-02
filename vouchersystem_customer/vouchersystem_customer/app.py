@@ -12,6 +12,7 @@ app = Flask(__name__)
 wsgi_app = app.wsgi_app
 
 from views import *
+from mail_pdf import *
 from models import *
 
 
