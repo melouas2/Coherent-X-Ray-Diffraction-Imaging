@@ -43,13 +43,11 @@ def purchase_voucher():
             message = "Please enter a valid email"
             return get_hotel(message)
         else:
-            print("In else")
             generate_code = True
             short_name = ""
             first_name = request.form['FirstName']
             last_name = request.form['LastName']
             if check_names(first_name, last_name):
-                print("This works")
                 for i in request.form['Hotel'].upper().split():
                     short_name += i[0]
                     while generate_code:
@@ -65,14 +63,11 @@ def purchase_voucher():
                 customer_name = first_name + " " + last_name
                 value = request.form['Amount']
                 payment_option = "Online Payment"
-                print("Trying get_ID")
                 get_Id = db_session.query(Hotel.Id).filter(Hotel.name == request.form['Hotel']).first()
                 hotel_Id = get_Id[0]
-                print(hotel_Id)
                 create_voucher(Id, code, type, customer_name, value, email, payment_option, hotel_Id)
                 send_voucher(code, email, request.form['Hotel'], hotel_Id)
                 message = "Thank you for your purchase"
-                print(message)
                 return get_hotel(message)
             else:
                 message = "Incorrect customer name entered"
@@ -91,7 +86,6 @@ def get_hotel(message):
         return render_template("Home.html", rows = rows, message = message)
 
 def create_voucher(voucher_Id, code, type, customer_name, value, email, payment_option, hotel_Id):
-    print("tring voucher")
     v = Voucher(
             Id = voucher_Id,
             code = code,
